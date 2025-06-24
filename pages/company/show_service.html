@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviço - Tailwind Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#f6ffff] text-black">
+    <header
+      class="bg-green-700 text-white px-6 py-4 flex justify-between items-center"
+    >
+      <div class="font-bold text-lg">
+        <a href="index.html" class="hover:underline">
+          <img src="../../images/logo.svg" alt="Logo do projeto" />
+        </a>
+      </div>
+      <div class="w-1/3 hidden md:block">
+        <input
+          type="text"
+          placeholder="O que você procura?"
+          class="w-full p-2 rounded-md text-black"
+        />
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="dashboard.html" class="hover:underline">Dashboard</a>
+        <a id="logout" href="#" class="hover:underline">Sair</a>
+      </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6 space-y-10">
+      <div>
+        <h1 id="title" class="text-2xl font-bold mb-1"></h1>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2">
+          <div id="main_image" class="bg-gray-300 w-full h-72 rounded-md"></div>
+
+          <div class="flex items-center gap-4 mt-5">
+            <div id="profile" class="w-12 h-12 bg-gray-400 rounded-full"></div>
+            <div>
+              <p id="name" class="font-medium"></p>
+              <p id="service_type" class="text-sm text-gray-500"></p>
+            </div>
+          </div>
+
+          <section class="mt-5">
+            <h2 class="text-xl font-semibold mb-2">Sobre mim</h2>
+            <p id="about" class="text-sm text-gray-700 leading-relaxed"></p>
+          </section>
+
+          <section class="mt-5">
+            <h2 class="text-xl font-semibold mb-2">Disponibilidade</h2>
+            <ul id="availability" class="text-sm space-y-1"></ul>
+          </section>
+
+          <section class="mt-5">
+            <h2 class="text-xl font-semibold mb-2">
+              Ferramentas e Diferenciais
+            </h2>
+            <p id="tools" class="text-sm text-gray-700 leading-relaxed"></p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-semibold mb-4">Trabalhos Na Área</h2>
+            <div class="flex gap-4">
+              <div class="w-40 h-28 bg-gray-400 rounded-md"></div>
+              <div class="w-40 h-28 bg-gray-400 rounded-md"></div>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-semibold mb-4">928 Avaliações</h2>
+            <div class="space-y-4">
+              <div>
+                <p class="font-medium">⭐️⭐️⭐️⭐️⭐️</p>
+                <p class="text-sm text-gray-700">
+                  Excelente trabalho! Entregou antes do prazo e com muita
+                  qualidade.
+                </p>
+              </div>
+              <div>
+                <p class="font-medium">⭐️⭐️⭐️⭐️</p>
+                <p class="text-sm text-gray-700">
+                  Muito bom, só tive um pequeno problema na comunicação.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <div
+            class="bg-white border border-gray-200 border-t-4 border-t-green-700 p-4 rounded-md shadow-sm"
+          >
+            <p class="text-2xl font-semibold mb-4">R$100</p>
+            <button
+              id="agreement"
+              class="w-full bg-green-700 text-white py-2 rounded-md hover:bg-green-800 transition"
+            >
+              Contratar
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="../../config/policy.js"></script>
+  <script
+    type="module"
+    src="../../js/company/fill_service_for_company.js"
+  ></script>
+  <script type="module" src="../../js/user/logout.js"></script>
+  <script type="module" src="../../js/company/agreement.js"></script>
+</html>

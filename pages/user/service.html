@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educonnect</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-100">
+      <header
+        class="bg-green-700 text-white px-6 py-4 flex justify-between items-center"
+      >
+        <div class="font-bold text-lg">
+          <a href="index.html" class="hover:underline">
+            <img src="../../images/logo.svg" alt="Logo do projeto" />
+          </a>
+        </div>
+        <div class="w-1/3 hidden md:block">
+          <input
+            type="text"
+            placeholder="O que você procura?"
+            class="w-full p-2 rounded-md text-black focus:outline-none focus:ring-0"
+          />
+        </div>
+        <nav class="space-x-4">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="service.html" class="hover:underline">Criar serviço</a>
+          <a href="agreements.html" class="hover:underline">Propostas</a>
+          <a id="logout" href="#" class="hover:underline">Sair</a>
+        </nav>
+      </header>
+
+      <main class="flex justify-center py-10">
+        <form
+          class="bg-white rounded-xl shadow px-8 py-6 w-full max-w-xl space-y-4"
+          id="create_service"
+        >
+          <h1 class="text-center text-lg font-semibold">
+            Adicione seu serviço
+          </h1>
+
+          <div>
+            <label class="block font-medium text-sm mb-1"
+              >Título do serviço</label
+            >
+            <input
+              type="text"
+              required
+              name="title"
+              class="w-full border rounded px-3 py-2 focus:border-green-700 focus:outline-none"
+              placeholder="Criação de sites com Tailwind"
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium text-sm mb-1"
+              >Tipo de serviço</label
+            >
+            <select
+              class="w-full border rounded px-3 py-2 text-gray-500"
+              required
+              name="service_type"
+            >
+              <option disabled selected value="">Escolha a categoria</option>
+              <option value="marketing">Marketing</option>
+              <option value="design">Design gráfico</option>
+              <option value="website">Websites</option>
+              <option value="developer">Desenvolvedor</option>
+              <option value="software_design">Modelagem de software</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block font-medium text-sm mb-1"
+              >Valor do serviço</label
+            >
+            <input
+              type="text"
+              required
+              name="price"
+              type="number"
+              class="w-full border rounded px-3 py-2 focus:border-green-700 focus:outline-none"
+              placeholder="R$"
+            />
+          </div>
+
+          <div>
+            <label class="block font-medium text-sm mb-1">Sobre mim</label>
+            <textarea
+              class="w-full border rounded px-3 py-2 focus:border-green-700 focus:outline-none"
+              rows="4"
+              required
+              name="about"
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block font-medium text-sm mb-1"
+              >Disponibilidade</label
+            >
+            <div class="grid grid-cols-2 gap-1 text-sm text-gray-700">
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="segunda"
+                  class="mr-2"
+                />
+                Segunda - Feira</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="terca"
+                  class="mr-2"
+                />
+                Terça - Feira</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="quarta"
+                  class="mr-2"
+                />
+                Quarta - Feira</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="quinta"
+                  class="mr-2"
+                />
+                Quinta - Feira</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="sexta"
+                  class="mr-2"
+                />
+                Sexta - Feira</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="sabado"
+                  class="mr-2"
+                />
+                Sábado</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="availability"
+                  value="domingo"
+                  class="mr-2"
+                />
+                Domingo</label
+              >
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-medium text-sm mb-1"
+              >Ferramentas e Diferenciais</label
+            >
+            <textarea
+              class="w-full border rounded px-3 py-2 focus:border-green-700 focus:outline-none"
+              rows="3"
+              required
+              name="tools"
+            ></textarea>
+          </div>
+
+          <div class="space-y-2">
+            <button
+              type="button"
+              class="bg-gray-100 border rounded px-4 py-2 text-sm w-full text-left"
+            >
+              📎 Anexar capa
+            </button>
+            <button
+              type="button"
+              class="bg-gray-100 border rounded px-4 py-2 text-sm w-full text-left"
+            >
+              📎 Anexar arquivos
+            </button>
+          </div>
+
+          <div class="text-right">
+            <button
+              type="submit"
+              class="bg-green-600 text-white px-6 py-2 rounded"
+            >
+              Concluir
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+  <script type="module" src="../../js/service/create_service.js"></script>
+  <script type="module" src="../../config/policy.js"></script>
+  <script type="module" src="../../js/user/logout.js"></script>
+</html>

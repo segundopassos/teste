@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educonnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100">
+    <header
+      class="bg-green-700 text-white px-6 py-4 flex items-center justify-between"
+    >
+      <div class="font-bold text-lg cursor-pointer">
+        <a href="index.html" class="hover:underline">
+          <img src="../../images/logo.svg" alt="Logo do projeto" />
+        </a>
+      </div>
+      <div class="w-1/3 hidden md:block">
+        <input
+          type="text"
+          placeholder="O que você procura?"
+          class="w-full p-2 rounded-md text-black focus:outline-none focus:ring-0"
+        />
+      </div>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="dashboard.html" class="hover:underline">Dashboard</a>
+        <a id="logout" href="#" class="hover:underline">Sair</a>
+      </nav>
+    </header>
+
+    <nav
+      class="bg-white border-b border-gray-200 px-8 py-4 flex justify-center"
+    >
+      <ul
+        class="flex gap-6 text-sm font-medium text-gray-600 overflow-y-auto overflow-x-auto"
+      >
+        <li class="text-green-600 border-b-2 border-green-600 pb-1">Geral</li>
+        <li>Marketing</li>
+        <li>Designer Gráfico</li>
+        <li>Websites</li>
+        <li>Desenvolvedor</li>
+        <li>Modelagem</li>
+        <li>Modelagem</li>
+      </ul>
+    </nav>
+
+    <main class="py-8">
+      <div class="mx-auto max-w-screen-2xl px-4">
+        <div id="cards-container" class="grid grid-cols-12 gap-6"></div>
+      </div>
+    </main>
+  </body>
+
+  <script type="module" src="../../js/service/load_data.js"></script>
+  <script type="module" src="../../config/policy.js"></script>
+  <script type="module" src="../../js/user/logout.js"></script>
+</html>
